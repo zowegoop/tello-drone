@@ -16,6 +16,9 @@ from djitellopy import Tello
 drone = Tello()
 
 # Take off and up to 6 feet
+# You need to convert feet to cm since all Tello distances and heights are in cm
+# You need to move up to 6 feet from the takeoff default height of 32 inches.
+
 drone.connect()
 drone.takeoff()
 drone.move_up(6)
